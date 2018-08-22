@@ -1,0 +1,30 @@
+package 草稿;
+
+import java.util.Scanner;
+
+public class Caogao {
+
+	public static void main(String[] args) {
+		System.out.println("请输入要猜的数字: [1,100]");
+		Scanner in = new Scanner(System.in);
+		int num = (int)(Math.random()*100+1);
+		int a;
+		int count = 0;
+		
+		do {
+			a = in.nextInt();
+			count++;
+			if( a>num )
+			{
+				System.out.println("偏大了");
+			}
+			else if( a < num )
+			{
+				System.out.println("偏小了");
+			}
+			
+		}while( a != num );
+		System.out.println("恭喜你猜了"+count+"次就猜对了");
+	}
+
+}
